@@ -35,7 +35,8 @@ namespace atm
             passInput = passwordBox.Text;
             if (passInput == "5100")
             {
-                MessageBox.Show("Valid Password");
+                Form2 mainMenu = new Form2();
+                mainMenu.Show();
             }
             else
             {
