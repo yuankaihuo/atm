@@ -17,9 +17,30 @@ namespace atm
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void passwordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passEnter_Click(object sender, EventArgs e)
+        {
+            String passInput;
+            passInput = passwordBox.Text;
+            if (passInput == "5100")
+            {
+                MessageBox.Show("Valid Password");
+            }
+            else
+            {
+                MessageBox.Show("Invalid Password, Try Again");
+            }
         }
     }
 }
