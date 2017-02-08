@@ -47,5 +47,19 @@ namespace atm
         {
 
         }
+
+        private void passCancel_Click(object sender, EventArgs e)
+        {
+            String passInput;
+            passInput = passwordBox.Text;
+            passInput = passInput.Remove(passInput.Length - 1);
+            passwordBox.Text = passInput;
+        }
+
+        private void passClear_Click(object sender, EventArgs e)
+        {
+            String passInput = "";
+            passwordBox.Text = passInput;
+        }
     }
 }

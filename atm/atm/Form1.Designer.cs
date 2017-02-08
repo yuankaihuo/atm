@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.passEnter = new System.Windows.Forms.Button();
+            this.passCancel = new System.Windows.Forms.Button();
+            this.passClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TSU_name
@@ -70,11 +72,33 @@
             this.passEnter.UseVisualStyleBackColor = true;
             this.passEnter.Click += new System.EventHandler(this.passEnter_Click);
             // 
+            // passCancel
+            // 
+            this.passCancel.Location = new System.Drawing.Point(431, 221);
+            this.passCancel.Name = "passCancel";
+            this.passCancel.Size = new System.Drawing.Size(65, 50);
+            this.passCancel.TabIndex = 4;
+            this.passCancel.Text = "CANCEL";
+            this.passCancel.UseVisualStyleBackColor = true;
+            this.passCancel.Click += new System.EventHandler(this.passCancel_Click);
+            // 
+            // passClear
+            // 
+            this.passClear.Location = new System.Drawing.Point(431, 300);
+            this.passClear.Name = "passClear";
+            this.passClear.Size = new System.Drawing.Size(65, 53);
+            this.passClear.TabIndex = 5;
+            this.passClear.Text = "CLEAR";
+            this.passClear.UseVisualStyleBackColor = true;
+            this.passClear.Click += new System.EventHandler(this.passClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 540);
+            this.Controls.Add(this.passClear);
+            this.Controls.Add(this.passCancel);
             this.Controls.Add(this.passEnter);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.label1);
@@ -93,6 +117,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Button passEnter;
+        private System.Windows.Forms.Button passCancel;
+        private System.Windows.Forms.Button passClear;
     }
 }
 
