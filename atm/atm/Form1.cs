@@ -61,5 +61,66 @@ namespace atm
             String passInput = "";
             passwordBox.Text = passInput;
         }
+
+        private void keyOne_Click(object sender, EventArgs e)
+        {
+            String passInput = passwordBox.Text;
+            passwordBox.Text = passInput + "1";
+        }
+
+        private void keyTwo_Click(object sender, EventArgs e)
+        {
+            String passInput = passwordBox.Text;
+            passwordBox.Text = passInput + "2";
+        }
+
+        private void keyThree_Click(object sender, EventArgs e)
+        {
+            String passInput = passwordBox.Text;
+            passwordBox.Text = passInput + "3";
+        }
+
+        private void keyFour_Click(object sender, EventArgs e)
+        {
+            String passInput = passwordBox.Text;
+            passwordBox.Text = passInput + "4";
+        }
+
+        private void keyFive_Click(object sender, EventArgs e)
+        {
+            String passInput = passwordBox.Text;
+            passwordBox.Text = passInput + "5";
+        }
+
+
+        private void keySix_Click(object sender, EventArgs e)
+        {
+            String passInput = passwordBox.Text;
+            passwordBox.Text = passInput + "6";
+        }
+
+        private void keySeven_Click(object sender, EventArgs e)
+        {
+            String passInput = passwordBox.Text;
+            passwordBox.Text = passInput + "7";
+        }
+
+        private void keyEight_Click(object sender, EventArgs e)
+        {
+            String passInput = passwordBox.Text;
+            passwordBox.Text = passInput + "8";
+        }
+
+        private void keyNine_Click(object sender, EventArgs e)
+        {
+            String passInput = passwordBox.Text;
+            passwordBox.Text = passInput + "9";
+        }
+
+        private void keyZero_Click(object sender, EventArgs e)
+        {
+            String passInput = passwordBox.Text;
+            passwordBox.Text = passInput + "0";
+        }
     }
 }
