@@ -42,5 +42,10 @@ namespace atm
                 MessageBox.Show("Invalid Password, Try Again");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
