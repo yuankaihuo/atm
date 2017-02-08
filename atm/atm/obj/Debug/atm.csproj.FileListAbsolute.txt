@@ -1,0 +1,9 @@
+C:\huoy1\atm\atm\atm\bin\Debug\atm.exe.config
+C:\huoy1\atm\atm\atm\bin\Debug\atm.exe
+C:\huoy1\atm\atm\atm\bin\Debug\atm.pdb
+C:\huoy1\atm\atm\atm\obj\Debug\atm.csprojResolveAssemblyReference.cache
+C:\huoy1\atm\atm\atm\obj\Debug\atm.Form1.resources
+C:\huoy1\atm\atm\atm\obj\Debug\atm.Properties.Resources.resources
+C:\huoy1\atm\atm\atm\obj\Debug\atm.csproj.GenerateResource.Cache
+C:\huoy1\atm\atm\atm\obj\Debug\atm.exe
+C:\huoy1\atm\atm\atm\obj\Debug\atm.pdb
