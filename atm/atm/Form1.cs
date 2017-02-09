@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +13,14 @@ namespace atm
 {
     public partial class Form1 : Form
     {
-        public String defaultPass = "5100";
+        public String passFileName = "password.txt";
         public int maxTryNum = 3;
 
         public Form1()
         {
             InitializeComponent();
+            string createText = "5100";
+            File.WriteAllText(passFileName, createText);
         }
 
 
@@ -33,9 +36,10 @@ namespace atm
 
         private void passEnter_Click(object sender, EventArgs e)
         {
+            String passDefault = File.ReadAllText(passFileName);
             String passInput;
             passInput = passwordBox.Text;
-            if (passInput == defaultPass)
+            if (passInput == passDefault)
             {
                 Form2 mainMenu = new Form2();
                 mainMenu.Show();
