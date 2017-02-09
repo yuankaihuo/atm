@@ -17,3 +17,4 @@ C:\project\atm\atm\atm\obj\Debug\atm.csproj.GenerateResource.Cache
 C:\project\atm\atm\atm\obj\Debug\atm.exe
 C:\project\atm\atm\atm\obj\Debug\atm.pdb
 C:\project\atm\atm\atm\obj\Debug\atm.Form2.resources
+C:\huoy1\atm\atm\atm\obj\Debug\atm.Form2.resources

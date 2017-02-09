@@ -12,11 +12,13 @@ namespace atm
 {
     public partial class Form1 : Form
     {
+        public String defaultPass = "5100";
+        public int maxTryNum = 3;
+
         public Form1()
         {
             InitializeComponent();
         }
-
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -26,21 +28,29 @@ namespace atm
 
         private void passwordBox_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void passEnter_Click(object sender, EventArgs e)
         {
             String passInput;
             passInput = passwordBox.Text;
-            if (passInput == "5100")
+            if (passInput == defaultPass)
             {
                 Form2 mainMenu = new Form2();
                 mainMenu.Show();
             }
             else
             {
-                MessageBox.Show("Invalid Password, Try Again");
+                maxTryNum--;
+                if (maxTryNum == 0) {
+                    MessageBox.Show("Invalid Password, failed three times, Bye!!!");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Password, Try Again, only "+maxTryNum+" opportunities left!");
+                }
             }
         }
 
