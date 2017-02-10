@@ -46,12 +46,12 @@
             this.keyFive = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblPin = new System.Windows.Forms.Label();
-            this.btnBlank = new System.Windows.Forms.Button();
-            this.pnlRed = new System.Windows.Forms.Panel();
-            this.pnlYellow = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlGreen = new System.Windows.Forms.Panel();
+            this.pnlYellow = new System.Windows.Forms.Panel();
+            this.pnlRed = new System.Windows.Forms.Panel();
+            this.btnBlank = new System.Windows.Forms.Button();
+            this.lblPin = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +86,7 @@
             this.passwordBox.Size = new System.Drawing.Size(375, 80);
             this.passwordBox.TabIndex = 2;
             this.passwordBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.passwordBox.UseSystemPasswordChar = true;
             this.passwordBox.UseWaitCursor = true;
             this.passwordBox.TextChanged += new System.EventHandler(this.passwordBox_TextChanged);
             // 
@@ -294,15 +295,29 @@
             this.panel1.Size = new System.Drawing.Size(375, 263);
             this.panel1.TabIndex = 18;
             // 
-            // lblPin
+            // pnlGreen
             // 
-            this.lblPin.AutoSize = true;
-            this.lblPin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPin.Location = new System.Drawing.Point(31, 116);
-            this.lblPin.Name = "lblPin";
-            this.lblPin.Size = new System.Drawing.Size(25, 13);
-            this.lblPin.TabIndex = 19;
-            this.lblPin.Text = "PIN";
+            this.pnlGreen.BackColor = System.Drawing.Color.Chartreuse;
+            this.pnlGreen.Location = new System.Drawing.Point(298, 230);
+            this.pnlGreen.Name = "pnlGreen";
+            this.pnlGreen.Size = new System.Drawing.Size(40, 5);
+            this.pnlGreen.TabIndex = 21;
+            // 
+            // pnlYellow
+            // 
+            this.pnlYellow.BackColor = System.Drawing.Color.Gold;
+            this.pnlYellow.Location = new System.Drawing.Point(298, 108);
+            this.pnlYellow.Name = "pnlYellow";
+            this.pnlYellow.Size = new System.Drawing.Size(40, 5);
+            this.pnlYellow.TabIndex = 20;
+            // 
+            // pnlRed
+            // 
+            this.pnlRed.BackColor = System.Drawing.Color.Red;
+            this.pnlRed.Location = new System.Drawing.Point(298, 55);
+            this.pnlRed.Name = "pnlRed";
+            this.pnlRed.Size = new System.Drawing.Size(40, 5);
+            this.pnlRed.TabIndex = 18;
             // 
             // btnBlank
             // 
@@ -313,21 +328,15 @@
             this.btnBlank.TabIndex = 17;
             this.btnBlank.UseVisualStyleBackColor = false;
             // 
-            // pnlRed
+            // lblPin
             // 
-            this.pnlRed.BackColor = System.Drawing.Color.Red;
-            this.pnlRed.Location = new System.Drawing.Point(298, 55);
-            this.pnlRed.Name = "pnlRed";
-            this.pnlRed.Size = new System.Drawing.Size(40, 5);
-            this.pnlRed.TabIndex = 18;
-            // 
-            // pnlYellow
-            // 
-            this.pnlYellow.BackColor = System.Drawing.Color.Gold;
-            this.pnlYellow.Location = new System.Drawing.Point(298, 108);
-            this.pnlYellow.Name = "pnlYellow";
-            this.pnlYellow.Size = new System.Drawing.Size(40, 5);
-            this.pnlYellow.TabIndex = 20;
+            this.lblPin.AutoSize = true;
+            this.lblPin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblPin.Location = new System.Drawing.Point(31, 116);
+            this.lblPin.Name = "lblPin";
+            this.lblPin.Size = new System.Drawing.Size(25, 13);
+            this.lblPin.TabIndex = 19;
+            this.lblPin.Text = "PIN";
             // 
             // panel4
             // 
@@ -335,14 +344,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(40, 5);
             this.panel4.TabIndex = 20;
-            // 
-            // pnlGreen
-            // 
-            this.pnlGreen.BackColor = System.Drawing.Color.Chartreuse;
-            this.pnlGreen.Location = new System.Drawing.Point(298, 230);
-            this.pnlGreen.Name = "pnlGreen";
-            this.pnlGreen.Size = new System.Drawing.Size(40, 5);
-            this.pnlGreen.TabIndex = 21;
             // 
             // Form1
             // 

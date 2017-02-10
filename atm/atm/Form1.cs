@@ -20,7 +20,9 @@ namespace atm
         {
             InitializeComponent();
             string createText = "5100";
-            File.WriteAllText(passFileName, createText);
+            if (!File.Exists(passFileName)){
+                File.WriteAllText(passFileName, createText);
+            }
         }
 
 
@@ -41,6 +43,7 @@ namespace atm
             passInput = passwordBox.Text;
             if (passInput == passDefault)
             {
+                passwordBox.Text = "";
                 Form2 mainMenu = new Form2();
                 mainMenu.Show();
             }
@@ -49,11 +52,13 @@ namespace atm
                 maxTryNum--;
                 if (maxTryNum == 0) {
                     MessageBox.Show("Invalid Password, failed three times, Bye!!!");
+                    passwordBox.Text = "";
                     this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Invalid Password, Try Again, only "+maxTryNum+" opportunities left!");
+                    passwordBox.Text = "";
                 }
             }
         }

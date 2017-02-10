@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.title = new System.Windows.Forms.Label();
+            this.money = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,9 +66,9 @@
             this.btnCash = new System.Windows.Forms.Button();
             this.btnWithdraw = new System.Windows.Forms.Button();
             this.btnDeposit = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.oldPassBox1 = new System.Windows.Forms.TextBox();
+            this.oldPassBox2 = new System.Windows.Forms.TextBox();
+            this.newPassBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.pnlKeyboard.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +76,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.Controls.Add(this.newPassBox);
+            this.panel1.Controls.Add(this.oldPassBox2);
+            this.panel1.Controls.Add(this.oldPassBox1);
+            this.panel1.Controls.Add(this.title);
+            this.panel1.Controls.Add(this.money);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -80,12 +98,121 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Location = new System.Drawing.Point(16, 45);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(232, 26);
+            this.title.TabIndex = 12;
+            this.title.Text = "Account Information:";
+            this.title.Visible = false;
+            this.title.Click += new System.EventHandler(this.title_Click);
+            // 
+            // money
+            // 
+            this.money.AutoSize = true;
+            this.money.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.money.Location = new System.Drawing.Point(41, 95);
+            this.money.Name = "money";
+            this.money.Size = new System.Drawing.Size(42, 46);
+            this.money.TabIndex = 11;
+            this.money.Text = "0";
+            this.money.Visible = false;
+            this.money.Click += new System.EventHandler(this.money_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(93, 153);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(242, 20);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "101 Main st, Nashville, TN, 37205";
+            this.label10.Visible = false;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.Location = new System.Drawing.Point(93, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(119, 20);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "(201)-519-1111";
+            this.label9.Visible = false;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.Location = new System.Drawing.Point(93, 107);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(199, 20);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Checking **** **** **** 1024";
+            this.label8.Visible = false;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(93, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 20);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Ge Liu";
+            this.label7.Visible = false;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(17, 153);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Address:";
+            this.label6.Visible = false;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(17, 130);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Phone:";
+            this.label5.Visible = false;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Type:";
+            this.label4.Visible = false;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 51);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Name:";
             this.label3.Visible = false;
@@ -184,6 +311,7 @@
             this.btnEnter.TabIndex = 13;
             this.btnEnter.Text = "ENTER";
             this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnBack
             // 
@@ -195,6 +323,7 @@
             this.btnBack.TabIndex = 12;
             this.btnBack.Text = "BK/SPC";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnClear
             // 
@@ -206,6 +335,7 @@
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnCancel
             // 
@@ -218,6 +348,7 @@
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnEight
             // 
@@ -230,6 +361,7 @@
             this.btnEight.TabIndex = 9;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = false;
+            this.btnEight.Click += new System.EventHandler(this.btnEight_Click);
             // 
             // btnNine
             // 
@@ -242,6 +374,7 @@
             this.btnNine.TabIndex = 8;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = false;
+            this.btnNine.Click += new System.EventHandler(this.btnNine_Click);
             // 
             // btnZero
             // 
@@ -254,6 +387,7 @@
             this.btnZero.TabIndex = 7;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = false;
+            this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
             // 
             // btnSeven
             // 
@@ -266,6 +400,7 @@
             this.btnSeven.TabIndex = 6;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = false;
+            this.btnSeven.Click += new System.EventHandler(this.btnSeven_Click);
             // 
             // btnSix
             // 
@@ -278,6 +413,7 @@
             this.btnSix.TabIndex = 5;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = false;
+            this.btnSix.Click += new System.EventHandler(this.btnSix_Click);
             // 
             // btnFive
             // 
@@ -290,6 +426,7 @@
             this.btnFive.TabIndex = 4;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = false;
+            this.btnFive.Click += new System.EventHandler(this.btnFive_Click);
             // 
             // btnFour
             // 
@@ -302,6 +439,7 @@
             this.btnFour.TabIndex = 3;
             this.btnFour.Text = "4";
             this.btnFour.UseVisualStyleBackColor = false;
+            this.btnFour.Click += new System.EventHandler(this.btnFour_Click);
             // 
             // button3
             // 
@@ -313,6 +451,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -325,6 +464,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnOne
             // 
@@ -337,6 +477,7 @@
             this.btnOne.TabIndex = 0;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = false;
+            this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
             // 
             // btnAccount
             // 
@@ -366,6 +507,7 @@
             this.btnBalance.Text = "Show Balance";
             this.btnBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBalance.UseVisualStyleBackColor = false;
+            this.btnBalance.Click += new System.EventHandler(this.btnBalance_Click);
             // 
             // btnChange
             // 
@@ -380,6 +522,7 @@
             this.btnChange.Text = "Change PIN";
             this.btnChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChange.UseVisualStyleBackColor = false;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
             // btnCash
             // 
@@ -394,6 +537,7 @@
             this.btnCash.Text = "Fast Cash $100";
             this.btnCash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCash.UseVisualStyleBackColor = false;
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
             // 
             // btnWithdraw
             // 
@@ -408,6 +552,7 @@
             this.btnWithdraw.Text = "Withdraw Menu";
             this.btnWithdraw.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWithdraw.UseVisualStyleBackColor = false;
+            this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
             // 
             // btnDeposit
             // 
@@ -422,36 +567,40 @@
             this.btnDeposit.Text = "Make Deposit";
             this.btnDeposit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeposit.UseVisualStyleBackColor = false;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
-            // label4
+            // oldPassBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Name:";
-            this.label4.Visible = false;
+            this.oldPassBox1.Location = new System.Drawing.Point(175, 84);
+            this.oldPassBox1.Name = "oldPassBox1";
+            this.oldPassBox1.Size = new System.Drawing.Size(182, 20);
+            this.oldPassBox1.TabIndex = 13;
+            this.oldPassBox1.UseSystemPasswordChar = true;
+            this.oldPassBox1.Visible = false;
+            this.oldPassBox1.Click += new System.EventHandler(this.oldPassBox1_Click);
+            this.oldPassBox1.TextChanged += new System.EventHandler(this.oldPassBox1_TextChanged);
             // 
-            // label5
+            // oldPassBox2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 110);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Name:";
-            this.label5.Visible = false;
+            this.oldPassBox2.Location = new System.Drawing.Point(175, 107);
+            this.oldPassBox2.Name = "oldPassBox2";
+            this.oldPassBox2.Size = new System.Drawing.Size(182, 20);
+            this.oldPassBox2.TabIndex = 14;
+            this.oldPassBox2.UseSystemPasswordChar = true;
+            this.oldPassBox2.Visible = false;
+            this.oldPassBox2.Click += new System.EventHandler(this.oldPassBox2_Click);
+            this.oldPassBox2.TextChanged += new System.EventHandler(this.oldPassBox2_TextChanged);
             // 
-            // label6
+            // newPassBox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 143);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Name:";
-            this.label6.Visible = false;
+            this.newPassBox.Location = new System.Drawing.Point(175, 130);
+            this.newPassBox.Name = "newPassBox";
+            this.newPassBox.Size = new System.Drawing.Size(182, 20);
+            this.newPassBox.TabIndex = 15;
+            this.newPassBox.UseSystemPasswordChar = true;
+            this.newPassBox.Visible = false;
+            this.newPassBox.Click += new System.EventHandler(this.newPassBox_Click);
+            this.newPassBox.TextChanged += new System.EventHandler(this.newPassBox_TextChanged);
             // 
             // Form2
             // 
@@ -509,5 +658,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label money;
+        private System.Windows.Forms.Label title;
+        private System.Windows.Forms.TextBox newPassBox;
+        private System.Windows.Forms.TextBox oldPassBox2;
+        private System.Windows.Forms.TextBox oldPassBox1;
     }
 }
